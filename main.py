@@ -3,10 +3,10 @@
 
 import re
 from datetime import datetime
-from fastapi import FastApi
+from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
-app = FastAPI
+app = FastAPI()
 
 @app.get("/get_nginx_5xx")
 def nginx_status():
