@@ -16,14 +16,13 @@ def nginx_status():
         status_code=200,
         content={
             "settings": [
-                    {
-                        "label": "Add view once option",
-                        "type": "checkbox",
-                        "description": "to approve view once"
-                        "default": False
-                    }
-                ],
-                "target_url": "toluairbnb.tech"
-            }
+                {
+                    "label": "Add view once option",
+                    "type": "checkbox",
+                    "description": "to approve view once",
+                    "default": False
+                }
+            ],
+            "target_url": "toluairbnb.tech"
         }
     )
