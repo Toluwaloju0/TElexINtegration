@@ -23,7 +23,7 @@ def nginx_status():
                 "descriptions": {
                     "app_name": "ViewOnce",
                     "app_description": "Add view once option",
-                    "app_logo": "https://imgur.com/a/wOwIpco"
+                    "app_logo": "https://imgur.com/a/wOwIpco",
                     "app_url": "http://toluairbnb.tech",
                     "background_color": "#fff"
                 },
