@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-@app.get("/get_nginx_5xx")
+@app.get("/viewOnce")
 def nginx_status():
     """ The function for the integration endpoint"""
 
