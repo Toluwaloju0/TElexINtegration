@@ -27,7 +27,7 @@ def nginx_status():
                     "app_url": "http://toluairbnb.tech",
                     "background_color": "#fff"
                 },
-                "is_active": true,
+                "is_active": True,
                 "integration_type": "modifier",
                 "key_features": [
                     "Checkbox"
