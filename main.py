@@ -68,7 +68,7 @@ async def targetUrl(message: str, channel_id: str, settings: List[Dict]):
             }
         )
     for setting in settings:
-        if setting.get('default') is True:
+        if setting.get('default') == "true":
             return JSONResponse(
                 status_code=200,
                 content={
