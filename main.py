@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """FastApi to return a JSON for telex integration"""
 
-import re
 from datetime import datetime
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+import requests
+from typing import List, Dict
 
 app = FastAPI()
+
 
 @app.get("/viewOnce")
 def nginx_status():
@@ -39,11 +41,45 @@ def nginx_status():
                         "label": "Set view once option",
                         "type": "checkbox",
                         "required": True,
-                        "default": "false"
+                        "default": False
                     }
                 ],
-                "target_url": "http://toluairbnb.tech/get_nginx_5xx",
+                "target_url": "http://toluairbnb.tech/targetUrl",
                 "tick_url": "http://toluairbnb.tech/get_nginx_5xx"
             }
+        }
+    )
+
+
+@app.post("/target_url")
+async def targetUrl(message: str, settings: List[Dict] = [], channel_id: str):
+    """The target url for the telex integration"""
+
+    if len(settings) == 0:
+        return JSONResponse(
+            status=400
+            content={
+                "error": "No setting was found for your message"""
+            }
+        )
+    for setting in settings:
+        if setting.get('default') is True:
+            return JSONResponse(
+                status=200,
+                content={
+                    "event_name": "message_formatted",
+                    "message": "This is a view once message, Contact the \
+sender for further clarifications",
+                    "status": "success",
+                    "username": "VeiwOnce-bot"
+                }
+            )
+    return JSONResponse(
+        status=200,
+        content={
+            "event_name": "message_ not_formatted",
+            "message": "message",
+            "status": "success",
+            "username": "VeiwOnce-bot"
         }
     )
