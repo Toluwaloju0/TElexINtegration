@@ -57,7 +57,7 @@ def nginx_status():
 
 
 @app.post("/target_url")
-async def targetUrl(message: str, channel_id: str, settings: List[Dict]=[]):
+async def targetUrl(message: str, channel_id: str, settings: List[Dict]):
     """The target url for the telex integration"""
 
     if len(settings) == 0:
