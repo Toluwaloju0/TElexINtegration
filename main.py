@@ -31,7 +31,7 @@ def nginx_status():
                 },
                 "is_active": True,
                 "integration_category": "Monitoring & Logging",
-                "integration_type": "modifier",
+                "integration_type": "Modifier",
                 "key_features": ["check box"],
                 "author": "TeeCoded",
                 "permissions": {
