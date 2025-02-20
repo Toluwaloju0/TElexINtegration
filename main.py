@@ -41,7 +41,8 @@ def nginx_status():
                         "label": "Update view once",
                         "type": "checkbox",
                         "required": True,
-                        "default": "False"
+                        "default": False,
+                        "options": [True, False]
                     }
                 ],
                 "target_url": "http://toluairbnb.tech/target_url",
