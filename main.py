@@ -32,10 +32,14 @@ def nginx_status():
                 "is_active": True,
                 "integration_category": "Monitoring & Logging",
                 "integration_type": "modifier",
-                "key_features": [
-                    "check box"
-                ],
+                "key_features": ["check box"],
                 "author": "TeeCoded",
+                "permissions": {
+                    "monitoring_user": {
+                        "always_online": True,
+                        "display_name": "Performance Monitor"
+                    }
+                },
                 "settings": [
                     {
                         "label": "Update view once",
