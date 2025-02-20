@@ -30,6 +30,7 @@ def nginx_status():
                     "background_color": "#fff"
                 },
                 "is_active": True,
+                "integration_category": "Monitoring & Logging",
                 "integration_type": "modifier",
                 "key_features": [
                     "check box"
