@@ -26,7 +26,7 @@ def nginx_status():
                     "app_name": "ViewOnce",
                     "app_description": "To set a view once setting for messages",
                     "app_logo": "https://imgur.com/a/wOwIpco",
-                    "app_url": "http://toluairbnb.tech",
+                    "app_url": "http://toluairbnb.tech/viewOnce",
                     "background_color": "#fff"
                 },
                 "is_active": True,
