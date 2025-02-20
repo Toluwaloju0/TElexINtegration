@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """FastApi to return a JSON for telex integration"""
 
 from datetime import datetime
@@ -52,7 +52,7 @@ def nginx_status():
 
 
 @app.post("/target_url")
-async def targetUrl(message: str, settings: List[Dict] = [], channel_id: str):
+async def targetUrl(message: str, channel_id: str, settings: List[Dict]=[]):
     """The target url for the telex integration"""
 
     if len(settings) == 0:
