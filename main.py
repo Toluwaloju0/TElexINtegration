@@ -57,7 +57,7 @@ async def targetUrl(message: str, settings: List[Dict] = [], channel_id: str):
 
     if len(settings) == 0:
         return JSONResponse(
-            status=400
+            status_code=400,
             content={
                 "error": "No setting was found for your message"""
             }
@@ -65,7 +65,7 @@ async def targetUrl(message: str, settings: List[Dict] = [], channel_id: str):
     for setting in settings:
         if setting.get('default') is True:
             return JSONResponse(
-                status=200,
+                status_code=200,
                 content={
                     "event_name": "message_formatted",
                     "message": "This is a view once message, Contact the \
@@ -75,7 +75,7 @@ sender for further clarifications",
                 }
             )
     return JSONResponse(
-        status=200,
+        status_code=200,
         content={
             "event_name": "message_ not_formatted",
             "message": "message",
