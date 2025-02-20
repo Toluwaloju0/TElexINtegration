@@ -13,9 +13,9 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: 44.203.199.151
+          host: 34.238.115.86
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd ~/TElexINtegration && git pull && sudo systemctl restart myapp            
+            cd ~/TElexINtegration && git pull && sudo systemctl restart fastapi

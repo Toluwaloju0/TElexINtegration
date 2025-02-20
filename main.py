@@ -19,33 +19,32 @@ def nginx_status():
         content={
             "data": {
                 "date": {
-                    "created_at": "2025-02-19",
-                    "updated_at": "2025-02-19"
+                    "created_at": "2025-02-20",
+                    "updated_at": "2025-02-20"
                 },
                 "descriptions": {
                     "app_name": "ViewOnce",
-                    "app_description": "Add view once option",
+                    "app_description": "To set a view once setting for messages",
                     "app_logo": "https://imgur.com/a/wOwIpco",
                     "app_url": "http://toluairbnb.tech",
                     "background_color": "#fff"
                 },
                 "is_active": True,
-                "integration_category": "Monitoring & Logging",
                 "integration_type": "modifier",
                 "key_features": [
-                    "Checkbox"
+                    "check box"
                 ],
                 "author": "TeeCoded",
                 "settings": [
                     {
-                        "label": "Set view once option",
+                        "label": "Update view once",
                         "type": "checkbox",
                         "required": True,
-                        "default": False
+                        "default": "False"
                     }
                 ],
                 "target_url": "http://toluairbnb.tech/target_url",
-                "tick_url": None
+                "tick_url": "None"
             }
         }
     )
