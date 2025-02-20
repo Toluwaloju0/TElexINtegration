@@ -40,7 +40,7 @@ def nginx_status():
                         "display_name": "Performance Monitor"
                     }
                 },
-                "setting": [
+                "settings": [
                     {
                         "label": "Update view once",
                         "type": "checkbox",
