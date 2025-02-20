@@ -1,13 +1,21 @@
 #!/usr/bin/python3
 """FastApi to return a JSON for telex integration"""
 
-from datetime import datetime
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-import requests
+from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Dict
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://toluairbnb.tech"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/viewOnce")
