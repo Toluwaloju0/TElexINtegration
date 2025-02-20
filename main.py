@@ -44,8 +44,8 @@ def nginx_status():
                         "default": False
                     }
                 ],
-                "target_url": "http://toluairbnb.tech/targetUrl",
-                "tick_url": "http://toluairbnb.tech/get_nginx_5xx"
+                "target_url": "http://toluairbnb.tech/target_url",
+                "tick_url": None
             }
         }
     )
